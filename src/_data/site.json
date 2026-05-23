@@ -4,8 +4,7 @@
     "links": [
       { "label": "Services", "href": "/services/" },
       { "label": "Who I help", "href": "/who-i-help/" },
-      { "label": "How it works", "href": "/how-it-works/" },
-      { "label": "Results", "href": "/results/" }
+      { "label": "How it works", "href": "/how-it-works/" }
     ],
     "cta_text": "Book a free call",
     "cta_href": "#"
