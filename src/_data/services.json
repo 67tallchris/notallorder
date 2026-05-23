@@ -1,0 +1,61 @@
+{
+  "eyebrow": "What I offer",
+  "headline": "The right service for <em>where you are</em> right now.",
+  "subheading": "Whether you need to nail your target market, get found on Google, write words that convert, or build a complete digital strategy — there's a service built for that.",
+  "items": [
+    {
+      "category": "Signature service",
+      "title": "Target market strategy",
+      "description": "Most small businesses market to everyone. That means they reach no one. I help you get precise about who your customer actually is — then build everything else around that clarity.",
+      "deliverables": [
+        "ICP deep-dive session",
+        "Customer persona development",
+        "Messaging framework",
+        "Positioning statement"
+      ],
+      "color": "#004B8C"
+    },
+    {
+      "category": "Visibility",
+      "title": "SEO",
+      "description": "If your customers are searching for what you do and you're not showing up, you're invisible. I make sure the right people find you at the right moment — without paying for every click.",
+      "deliverables": [
+        "Keyword research & mapping",
+        "On-page optimisation",
+        "Content strategy",
+        "Technical audit & recommendations"
+      ],
+      "color": "#7196BD"
+    },
+    {
+      "category": "Conversion",
+      "title": "Copywriting",
+      "description": "Most business copy is forgettable. Yours doesn't have to be. I write words that speak directly to your customer in language they recognise — and move them to act.",
+      "deliverables": [
+        "Website copy",
+        "Landing pages",
+        "Email sequences",
+        "Ad copy"
+      ],
+      "color": "#004B8C"
+    },
+    {
+      "category": "Full service",
+      "title": "Digital strategy",
+      "description": "If you want the full picture — where you are, where you need to go, and exactly how to get there — this is it. A complete digital strategy built around your business, not a template.",
+      "deliverables": [
+        "Full digital audit",
+        "Channel strategy",
+        "90-day action plan",
+        "Ongoing support"
+      ],
+      "color": "#7196BD"
+    }
+  ],
+  "cta": {
+    "headline": "Not sure which service is right for you?",
+    "subheading": "Book a free call and we'll figure it out together. No pitch, no pressure.",
+    "button_text": "Book a free strategy call",
+    "button_href": "#"
+  }
+}

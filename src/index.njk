@@ -1,69 +1,24 @@
 ---
 title: No Tall Order
+layout: base.njk
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }}</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&family=Aleo:wght@400;700&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Red Hat Display", sans-serif; background: #f5f4f1; }
-
-nav {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 11px 2.5rem; background: #fff;
-  border-bottom: 1px solid #dddbd4;
-}
-.logo img { height: 72px; width: auto; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: 15px; color: #848789; text-decoration: none; font-weight: 500; letter-spacing: 0.03em; }
-.nav-cta {
-  background: #004B8C; color: #fff; font-size: 15px; font-weight: 700;
-  padding: 11px 24px; border-radius: 6px; text-decoration: none; letter-spacing: 0.03em;
-}
-
+{% block styles %}
 .hero {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 3rem; align-items: center;
   padding: 5rem 2.5rem 4rem; max-width: 1100px; margin: 0 auto;
 }
-
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #e8eef5; color: #004B8C;
-  font-size: 13px; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; padding: 6px 14px;
-  border-radius: 100px; margin-bottom: 1.5rem;
-}
-.eyebrow-dot { width: 6px; height: 6px; background: #004B8C; border-radius: 50%; }
-
 h1 {
   font-size: 54px; font-weight: 700; line-height: 1.1;
   letter-spacing: -0.5px; color: #272E33; margin-bottom: 1.25rem;
 }
 h1 em { font-style: normal; color: #004B8C; }
-
 .sub {
   font-family: "Aleo", serif;
   font-size: 20px; line-height: 1.75; color: #848789;
   margin-bottom: 2rem; max-width: 440px;
 }
-
 .btns { display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem; }
-.btn-p {
-  background: #004B8C; color: #fff;
-  font-size: 17px; font-weight: 700; padding: 15px 30px;
-  border-radius: 6px; text-decoration: none;
-}
-.btn-s {
-  color: #272E33; font-size: 17px; font-weight: 500;
-  text-decoration: none; display: flex; align-items: center; gap: 6px;
-}
-.btn-s .arr { color: #004B8C; font-size: 22px; }
-
 .trust {
   display: flex; gap: 2rem; align-items: center;
   padding-top: 1.5rem; border-top: 1px solid #dddbd4;
@@ -73,9 +28,7 @@ h1 em { font-style: normal; color: #004B8C; }
 .trust-num span { color: #004B8C; }
 .trust-label { font-family: "Aleo", serif; font-size: 14px; color: #848789; }
 .trust-div { width: 1px; height: 36px; background: #dddbd4; }
-
 .hero-right { display: flex; flex-direction: column; gap: 1.25rem; align-items: center; }
-
 .logo-card {
   background: #fff; border-radius: 16px;
   border: 1px solid #dddbd4; padding: 2.5rem 3rem;
@@ -83,7 +36,6 @@ h1 em { font-style: normal; color: #004B8C; }
   width: 100%;
 }
 .logo-card img { height: 220px; width: auto; }
-
 .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
 .sc {
   background: #fff; border-radius: 10px;
@@ -96,7 +48,6 @@ h1 em { font-style: normal; color: #004B8C; }
 .sc-title { font-size: 15px; font-weight: 700; color: #272E33; margin-bottom: 3px; }
 .sc-desc { font-family: "Aleo", serif; font-size: 14px; color: #848789; line-height: 1.5; }
 .sc-bar { height: 3px; border-radius: 2px; margin-top: 10px; }
-
 .stats-bar { background: #004B8C; padding: 1.25rem 2.5rem; }
 .stats-inner {
   max-width: 1100px; margin: 0 auto;
@@ -110,22 +61,9 @@ h1 em { font-style: normal; color: #004B8C; }
 .stat-num { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: -0.3px; }
 .stat-num span { color: #7196BD; }
 .stat-lbl { font-family: "Aleo", serif; font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 2px; }
-</style>
-</head>
-<body>
+{% endblock %}
 
-<nav>
-  <div class="logo">
-    <img src="/assets/logo.png" alt="{{ site.nav.logo_alt }}">
-  </div>
-  <ul class="nav-links">
-    {% for link in site.nav.links %}
-    <li><a href="{{ link.href }}">{{ link.label }}</a></li>
-    {% endfor %}
-  </ul>
-  <a href="{{ site.nav.cta_href }}" class="nav-cta">{{ site.nav.cta_text }}</a>
-</nav>
-
+{% block content %}
 <div class="hero">
   <div>
     <div class="eyebrow"><span class="eyebrow-dot"></span>{{ site.hero.eyebrow }}</div>
@@ -150,7 +88,6 @@ h1 em { font-style: normal; color: #004B8C; }
     <div class="logo-card">
       <img src="/assets/logo.png" alt="{{ site.nav.logo_alt }}">
     </div>
-
     <div class="service-grid">
       {% for svc in site.services %}
       <div class="sc">
@@ -174,6 +111,4 @@ h1 em { font-style: normal; color: #004B8C; }
     {% endfor %}
   </div>
 </div>
-
-</body>
-</html>
+{% endblock %}

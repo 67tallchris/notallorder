@@ -1,0 +1,37 @@
+{
+  "eyebrow": "What clients say",
+  "headline": "Real results for <em>real small businesses.</em>",
+  "subheading": "Here's what happens when you stop guessing and start with strategy.",
+  "testimonials": [
+    {
+      "quote": "Chris helped us identify exactly who we were talking to — and suddenly everything clicked. Our website enquiries doubled within three months and we finally felt like we were speaking to the right people.",
+      "name": "Sarah M.",
+      "role": "Independent accountant"
+    },
+    {
+      "quote": "I'd wasted money on ads for two years. Chris showed me the problem wasn't the ads — it was the message. Once we fixed that, everything changed. Complete game changer.",
+      "name": "Tom R.",
+      "role": "Plumbing & heating contractor"
+    },
+    {
+      "quote": "The strategy document Chris delivered was the clearest thing I'd ever seen for my business. I finally knew what to do and in what order. Worth every penny.",
+      "name": "Jen K.",
+      "role": "Independent boutique owner"
+    }
+  ],
+  "outcomes": {
+    "visible": true,
+    "headline": "What you can expect",
+    "items": [
+      { "stat": "Clarity", "description": "On who your customer is and how to reach them" },
+      { "stat": "Confidence", "description": "To invest in marketing that's right for your business" },
+      { "stat": "Direction", "description": "A clear plan you can act on straight away" }
+    ]
+  },
+  "cta": {
+    "headline": "Let's get you results like these.",
+    "subheading": "Book a free call and let's talk about what's possible for your business.",
+    "button_text": "Book a free strategy call",
+    "button_href": "#"
+  }
+}

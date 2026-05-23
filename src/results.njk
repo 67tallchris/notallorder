@@ -1,0 +1,90 @@
+---
+title: Results | No Tall Order
+layout: base.njk
+---
+{% block styles %}
+.testimonials {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+}
+.testimonial {
+  background: #fff; border-radius: 12px;
+  border: 1px solid #dddbd4; padding: 2rem;
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.testimonial-quote {
+  font-family: "Aleo", serif; font-size: 17px;
+  line-height: 1.75; color: #272E33; flex: 1;
+}
+.testimonial-quote::before {
+  content: "\201C";
+  display: block; font-size: 48px; line-height: 1;
+  color: #004B8C; margin-bottom: 0.25rem;
+}
+.testimonial-name { font-size: 15px; font-weight: 700; color: #272E33; }
+.testimonial-role { font-family: "Aleo", serif; font-size: 14px; color: #848789; }
+
+.outcomes { margin-top: 3.5rem; }
+.outcomes h2 {
+  font-size: 28px; font-weight: 700; color: #272E33;
+  margin-bottom: 1.5rem; letter-spacing: -0.3px;
+}
+.outcomes-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+}
+.outcome-card {
+  background: #004B8C; border-radius: 12px;
+  padding: 1.75rem 2rem;
+}
+.outcome-stat {
+  font-size: 28px; font-weight: 900; color: #fff;
+  letter-spacing: -0.5px; margin-bottom: 0.4rem;
+}
+.outcome-desc {
+  font-family: "Aleo", serif; font-size: 15px;
+  color: rgba(255,255,255,0.7); line-height: 1.5;
+}
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>{{ results.eyebrow }}</div>
+    <h1>{{ results.headline | safe }}</h1>
+    <p class="sub">{{ results.subheading }}</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="testimonials">
+    {% for t in results.testimonials %}
+    <div class="testimonial">
+      <div class="testimonial-quote">{{ t.quote }}</div>
+      <div>
+        <div class="testimonial-name">{{ t.name }}</div>
+        <div class="testimonial-role">{{ t.role }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if results.outcomes.visible %}
+  <div class="outcomes">
+    <h2>{{ results.outcomes.headline }}</h2>
+    <div class="outcomes-grid">
+      {% for item in results.outcomes.items %}
+      <div class="outcome-card">
+        <div class="outcome-stat">{{ item.stat }}</div>
+        <div class="outcome-desc">{{ item.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="cta-band">
+  <h2>{{ results.cta.headline }}</h2>
+  <p>{{ results.cta.subheading }}</p>
+  <a href="{{ results.cta.button_href }}" class="btn-p">{{ results.cta.button_text }}</a>
+</div>
+{% endblock %}

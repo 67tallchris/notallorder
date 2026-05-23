@@ -1,0 +1,59 @@
+---
+title: How It Works | No Tall Order
+layout: base.njk
+---
+{% block styles %}
+.steps { display: flex; flex-direction: column; gap: 1.25rem; }
+.step {
+  background: #fff; border-radius: 12px;
+  border: 1px solid #dddbd4; padding: 2rem 2.5rem;
+  display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem;
+  align-items: start;
+}
+.step-number {
+  font-size: 42px; font-weight: 900; color: #e8eef5;
+  letter-spacing: -1px; line-height: 1;
+}
+.step h3 { font-size: 22px; font-weight: 700; color: #272E33; margin-bottom: 0.6rem; }
+.step p {
+  font-family: "Aleo", serif; font-size: 17px;
+  line-height: 1.75; color: #848789;
+}
+.step-duration {
+  display: inline-block; margin-top: 0.75rem;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #004B8C;
+  background: #e8eef5; padding: 4px 10px; border-radius: 100px;
+}
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>{{ howitworks.eyebrow }}</div>
+    <h1>{{ howitworks.headline | safe }}</h1>
+    <p class="sub">{{ howitworks.subheading }}</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="steps">
+    {% for step in howitworks.steps %}
+    <div class="step">
+      <div class="step-number">{{ step.number }}</div>
+      <div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+        <span class="step-duration">{{ step.duration }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>{{ howitworks.cta.headline }}</h2>
+  <p>{{ howitworks.cta.subheading }}</p>
+  <a href="{{ howitworks.cta.button_href }}" class="btn-p">{{ howitworks.cta.button_text }}</a>
+</div>
+{% endblock %}

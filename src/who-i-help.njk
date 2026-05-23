@@ -1,0 +1,66 @@
+---
+title: Who I Help | No Tall Order
+layout: base.njk
+---
+{% block styles %}
+.profile-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+}
+.profile-card {
+  background: #fff; border-radius: 12px;
+  border: 1px solid #dddbd4; padding: 1.75rem 2rem;
+}
+.profile-card h3 {
+  font-size: 18px; font-weight: 700; color: #272E33;
+  margin-bottom: 0.6rem; line-height: 1.3;
+}
+.profile-card p {
+  font-family: "Aleo", serif; font-size: 16px;
+  line-height: 1.75; color: #848789;
+}
+.not-for {
+  background: #272E33; border-radius: 12px;
+  padding: 2rem 2.5rem; margin-top: 1.25rem;
+}
+.not-for h3 {
+  font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 0.6rem;
+}
+.not-for p {
+  font-family: "Aleo", serif; font-size: 17px;
+  line-height: 1.75; color: rgba(255,255,255,0.65);
+}
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>{{ whoihelp.eyebrow }}</div>
+    <h1>{{ whoihelp.headline | safe }}</h1>
+    <p class="sub">{{ whoihelp.subheading }}</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="profile-grid">
+    {% for profile in whoihelp.profiles %}
+    <div class="profile-card">
+      <h3>{{ profile.title }}</h3>
+      <p>{{ profile.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if whoihelp.not_for.visible %}
+  <div class="not-for">
+    <h3>{{ whoihelp.not_for.headline }}</h3>
+    <p>{{ whoihelp.not_for.description }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<div class="cta-band">
+  <h2>{{ whoihelp.cta.headline }}</h2>
+  <p>{{ whoihelp.cta.subheading }}</p>
+  <a href="{{ whoihelp.cta.button_href }}" class="btn-p">{{ whoihelp.cta.button_text }}</a>
+</div>
+{% endblock %}

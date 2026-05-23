@@ -2,10 +2,10 @@
   "nav": {
     "logo_alt": "No Tall Order logo",
     "links": [
-      { "label": "Services", "href": "#" },
-      { "label": "Who I help", "href": "#" },
-      { "label": "How it works", "href": "#" },
-      { "label": "Results", "href": "#" }
+      { "label": "Services", "href": "/services/" },
+      { "label": "Who I help", "href": "/who-i-help/" },
+      { "label": "How it works", "href": "/how-it-works/" },
+      { "label": "Results", "href": "/results/" }
     ],
     "cta_text": "Book a free call",
     "cta_href": "#"

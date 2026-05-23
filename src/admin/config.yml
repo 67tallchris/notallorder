@@ -14,8 +14,10 @@ collections:
   - name: pages
     label: Pages
     files:
+
+      # ── Home page ──────────────────────────────────────────────────────────
       - name: home
-        label: Home Page
+        label: Home
         file: src/_data/site.json
         fields:
           - label: Navigation
@@ -31,16 +33,12 @@ collections:
                   - { label: Link (href), name: href, widget: string }
               - { label: CTA button text, name: cta_text, widget: string }
               - { label: CTA button link, name: cta_href, widget: string }
-
           - label: Hero section
             name: hero
             widget: object
             fields:
               - { label: Eyebrow text, name: eyebrow, widget: string }
-              - label: Headline
-                name: headline
-                widget: string
-                hint: "Use <em>text</em> to color a word blue. Use a period to end a line visually."
+              - { label: Headline, name: headline, widget: string, hint: "Use <em>text</em> to colour a word blue." }
               - { label: Subheading, name: subheading, widget: text }
               - { label: Primary CTA text, name: primary_cta_text, widget: string }
               - { label: Primary CTA link, name: primary_cta_href, widget: string }
@@ -49,15 +47,11 @@ collections:
               - label: Trust bar items
                 name: trust_items
                 widget: list
-                max: 3
                 min: 3
+                max: 3
                 fields:
-                  - label: Number / stat
-                    name: number
-                    widget: string
-                    hint: "Use <span>text</span> to color part of it blue."
-                  - { label: Label below stat, name: label, widget: string }
-
+                  - { label: Stat, name: number, widget: string, hint: "Use <span>text</span> to colour part blue." }
+                  - { label: Label, name: label, widget: string }
           - label: Service cards
             name: services
             widget: list
@@ -66,20 +60,142 @@ collections:
               - { label: Category label, name: category, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
-              - label: Accent color
+              - label: Accent colour
                 name: color
                 widget: select
                 options:
                   - { label: Dark blue, value: "#004B8C" }
                   - { label: Light blue, value: "#7196BD" }
-
           - label: Stats bar
             name: stats
             widget: list
             max: 4
             fields:
-              - label: Value
-                name: value
-                widget: string
-                hint: "Use <span>text</span> to color part of it light blue."
-              - { label: Label below value, name: label, widget: string }
+              - { label: Value, name: value, widget: string, hint: "Use <span>text</span> to colour part light blue." }
+              - { label: Label, name: label, widget: string }
+
+      # ── Services page ──────────────────────────────────────────────────────
+      - name: services
+        label: Services
+        file: src/_data/services.json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Headline, name: headline, widget: string, hint: "Use <em>text</em> to colour a phrase blue." }
+          - { label: Subheading, name: subheading, widget: text }
+          - label: Service items
+            name: items
+            widget: list
+            fields:
+              - { label: Category label, name: category, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Deliverables
+                name: deliverables
+                widget: list
+                field: { label: Item, name: item, widget: string }
+              - label: Accent colour
+                name: color
+                widget: select
+                options:
+                  - { label: Dark blue, value: "#004B8C" }
+                  - { label: Light blue, value: "#7196BD" }
+          - label: CTA section
+            name: cta
+            widget: object
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Button text, name: button_text, widget: string }
+              - { label: Button link, name: button_href, widget: string }
+
+      # ── Who I help page ────────────────────────────────────────────────────
+      - name: whoihelp
+        label: Who I Help
+        file: src/_data/whoihelp.json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Headline, name: headline, widget: string, hint: "Use <em>text</em> to colour a phrase blue." }
+          - { label: Subheading, name: subheading, widget: text }
+          - label: Profile cards
+            name: profiles
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Who I don't work with
+            name: not_for
+            widget: object
+            fields:
+              - { label: Show this section, name: visible, widget: boolean, default: true }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: CTA section
+            name: cta
+            widget: object
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Button text, name: button_text, widget: string }
+              - { label: Button link, name: button_href, widget: string }
+
+      # ── How it works page ──────────────────────────────────────────────────
+      - name: howitworks
+        label: How It Works
+        file: src/_data/howitworks.json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Headline, name: headline, widget: string, hint: "Use <em>text</em> to colour a phrase blue." }
+          - { label: Subheading, name: subheading, widget: text }
+          - label: Steps
+            name: steps
+            widget: list
+            fields:
+              - { label: Step number, name: number, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Duration, name: duration, widget: string }
+          - label: CTA section
+            name: cta
+            widget: object
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Button text, name: button_text, widget: string }
+              - { label: Button link, name: button_href, widget: string }
+
+      # ── Results page ───────────────────────────────────────────────────────
+      - name: results
+        label: Results
+        file: src/_data/results.json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Headline, name: headline, widget: string, hint: "Use <em>text</em> to colour a phrase blue." }
+          - { label: Subheading, name: subheading, widget: text }
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - { label: Quote, name: quote, widget: text }
+              - { label: Name, name: name, widget: string }
+              - { label: Role / business type, name: role, widget: string }
+          - label: Outcomes section
+            name: outcomes
+            widget: object
+            fields:
+              - { label: Show this section, name: visible, widget: boolean, default: true }
+              - { label: Headline, name: headline, widget: string }
+              - label: Outcome items
+                name: items
+                widget: list
+                max: 3
+                fields:
+                  - { label: Stat / label, name: stat, widget: string }
+                  - { label: Description, name: description, widget: string }
+          - label: CTA section
+            name: cta
+            widget: object
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Button text, name: button_text, widget: string }
+              - { label: Button link, name: button_href, widget: string }
