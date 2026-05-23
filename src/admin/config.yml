@@ -2,7 +2,7 @@ backend:
   name: github
   repo: 67tallchris/notallorder
   branch: main
-  base_url: https://auth.YOUR_WORKERS_SUBDOMAIN.workers.dev  # UPDATE THIS after deploying the Worker
+  base_url: https://notallorder-auth.portercoaching.workers.dev
 
 # Uncomment to test locally without GitHub auth:
 # local_backend: true
