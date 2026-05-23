@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Get in touch",
+  "headline": "Let's talk about <em>your business.</em>",
+  "subheading": "Fill in the form and I'll get back to you within one business day.",
+  "form": {
+    "fields": {
+      "name_label": "Your name",
+      "email_label": "Your email",
+      "business_label": "What does your business do?",
+      "service_label": "What are you looking for help with?",
+      "message_label": "Anything else you'd like me to know?"
+    },
+    "service_options": [
+      "Target market strategy",
+      "SEO",
+      "Copywriting",
+      "Digital strategy",
+      "Not sure yet"
+    ],
+    "submit_text": "Send message",
+    "success_headline": "Message sent!",
+    "success_body": "Thanks for getting in touch. I'll be back to you within one business day."
+  },
+  "reassurance": {
+    "headline": "What happens next",
+    "steps": [
+      { "title": "I'll read your message", "description": "I take time to understand your situation before responding — you won't get a generic reply." },
+      { "title": "I'll be in touch within a day", "description": "Usually much sooner. If it's urgent, say so in your message." },
+      { "title": "We'll find a time to talk", "description": "If it sounds like a good fit, I'll suggest a free 30-minute call to dig into the details." }
+    ]
+  }
+}

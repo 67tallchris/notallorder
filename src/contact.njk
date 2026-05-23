@@ -1,0 +1,168 @@
+---
+title: Get in Touch | No Tall Order
+---
+{% extends "base.njk" %}
+{% block styles %}
+.contact-body {
+  max-width: 1100px; margin: 0 auto;
+  padding: 3.5rem 2.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: start;
+}
+
+/* ── Form ── */
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label {
+  font-size: 14px; font-weight: 700; color: #272E33; letter-spacing: 0.01em;
+}
+.field input,
+.field select,
+.field textarea {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px; color: #272E33;
+  background: #fff; border: 1px solid #dddbd4;
+  border-radius: 8px; padding: 12px 14px;
+  width: 100%; outline: none;
+  transition: border-color 0.15s;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: #004B8C; }
+.field textarea { resize: vertical; min-height: 120px; }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23848789' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.submit-btn {
+  background: #004B8C; color: #fff;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 17px; font-weight: 700; padding: 15px 30px;
+  border-radius: 6px; border: none; cursor: pointer;
+  text-align: center; transition: opacity 0.15s;
+}
+.submit-btn:hover { opacity: 0.9; }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Success state ── */
+.success-msg {
+  display: none; background: #e8eef5; border-radius: 12px;
+  border: 1px solid #c5d5e8; padding: 2rem;
+  text-align: center;
+}
+.success-msg h3 { font-size: 22px; font-weight: 700; color: #004B8C; margin-bottom: 0.5rem; }
+.success-msg p { font-family: "Aleo", serif; font-size: 17px; color: #848789; line-height: 1.75; }
+.success-icon { font-size: 36px; margin-bottom: 0.75rem; }
+
+/* ── Reassurance panel ── */
+.reassurance h2 {
+  font-size: 22px; font-weight: 700; color: #272E33;
+  margin-bottom: 1.5rem; letter-spacing: -0.2px;
+}
+.reassurance-steps { display: flex; flex-direction: column; gap: 1.25rem; }
+.reassurance-step {
+  background: #fff; border-radius: 10px;
+  border: 1px solid #dddbd4; padding: 1.25rem 1.5rem;
+}
+.reassurance-step h4 { font-size: 16px; font-weight: 700; color: #272E33; margin-bottom: 4px; }
+.reassurance-step p { font-family: "Aleo", serif; font-size: 15px; color: #848789; line-height: 1.6; }
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>{{ contact.eyebrow }}</div>
+    <h1>{{ contact.headline | safe }}</h1>
+    <p class="sub">{{ contact.subheading }}</p>
+  </div>
+</div>
+
+<div class="contact-body">
+  <div>
+    <form class="contact-form" id="contact-form">
+      <input type="hidden" name="access_key" value="b013ba1f-7019-4ad3-8378-246356eac7d2">
+      <input type="hidden" name="subject" value="New enquiry from No Tall Order">
+      <input type="checkbox" name="botcheck" style="display:none">
+
+      <div class="field">
+        <label for="name">{{ contact.form.fields.name_label }}</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">{{ contact.form.fields.email_label }}</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="business">{{ contact.form.fields.business_label }}</label>
+        <input type="text" id="business" name="business" required>
+      </div>
+
+      <div class="field">
+        <label for="service">{{ contact.form.fields.service_label }}</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select one…</option>
+          {% for option in contact.form.service_options %}
+          <option value="{{ option }}">{{ option }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">{{ contact.form.fields.message_label }}</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">{{ contact.form.submit_text }}</button>
+    </form>
+
+    <div class="success-msg" id="success-msg">
+      <div class="success-icon">✓</div>
+      <h3>{{ contact.form.success_headline }}</h3>
+      <p>{{ contact.form.success_body }}</p>
+    </div>
+  </div>
+
+  <div class="reassurance">
+    <h2>{{ contact.reassurance.headline }}</h2>
+    <div class="reassurance-steps">
+      {% for step in contact.reassurance.steps %}
+      <div class="reassurance-step">
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('success-msg');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const data = await res.json();
+      if (data.success) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = '{{ contact.form.submit_text }}';
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = '{{ contact.form.submit_text }}';
+      alert('Something went wrong. Please try again.');
+    }
+  });
+</script>
+{% endblock %}

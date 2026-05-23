@@ -7,16 +7,16 @@
       { "label": "How it works", "href": "/how-it-works/" }
     ],
     "cta_text": "Book a free call",
-    "cta_href": "#"
+    "cta_href": "/contact/"
   },
   "hero": {
     "eyebrow": "Digital strategy for small businesses",
     "headline": "Your customers are out there. <em>Let's make sure</em> they find you.",
     "subheading": "Most SMBs waste money talking to the wrong people, in the wrong language. I help you find your real target market — and make your message land.",
     "primary_cta_text": "See how it works",
-    "primary_cta_href": "#",
+    "primary_cta_href": "/contact/",
     "secondary_cta_text": "Book a free strategy call",
-    "secondary_cta_href": "#",
+    "secondary_cta_href": "/contact/",
     "trust_items": [
       { "number": "1<span>on</span>1", "label": "Work directly with me" },
       { "number": "SMB<span>↑</span>", "label": "Exclusively focused" },
