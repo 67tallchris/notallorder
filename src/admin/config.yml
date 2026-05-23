@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/notallorder  # UPDATE THIS
+  branch: main
+  base_url: https://auth.YOUR_WORKERS_SUBDOMAIN.workers.dev  # UPDATE THIS after deploying the Worker
+
+# Uncomment to test locally without GitHub auth:
+# local_backend: true
+
+media_folder: public/assets
+public_folder: /assets
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home Page
+        file: src/_data/site.json
+        fields:
+          - label: Navigation
+            name: nav
+            widget: object
+            fields:
+              - { label: Logo alt text, name: logo_alt, widget: string }
+              - label: Nav links
+                name: links
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link (href), name: href, widget: string }
+              - { label: CTA button text, name: cta_text, widget: string }
+              - { label: CTA button link, name: cta_href, widget: string }
+
+          - label: Hero section
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow text, name: eyebrow, widget: string }
+              - label: Headline
+                name: headline
+                widget: string
+                hint: "Use <em>text</em> to color a word blue. Use a period to end a line visually."
+              - { label: Subheading, name: subheading, widget: text }
+              - { label: Primary CTA text, name: primary_cta_text, widget: string }
+              - { label: Primary CTA link, name: primary_cta_href, widget: string }
+              - { label: Secondary CTA text, name: secondary_cta_text, widget: string }
+              - { label: Secondary CTA link, name: secondary_cta_href, widget: string }
+              - label: Trust bar items
+                name: trust_items
+                widget: list
+                max: 3
+                min: 3
+                fields:
+                  - label: Number / stat
+                    name: number
+                    widget: string
+                    hint: "Use <span>text</span> to color part of it blue."
+                  - { label: Label below stat, name: label, widget: string }
+
+          - label: Service cards
+            name: services
+            widget: list
+            max: 4
+            fields:
+              - { label: Category label, name: category, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - label: Accent color
+                name: color
+                widget: select
+                options:
+                  - { label: Dark blue, value: "#004B8C" }
+                  - { label: Light blue, value: "#7196BD" }
+
+          - label: Stats bar
+            name: stats
+            widget: list
+            max: 4
+            fields:
+              - label: Value
+                name: value
+                widget: string
+                hint: "Use <span>text</span> to color part of it light blue."
+              - { label: Label below value, name: label, widget: string }

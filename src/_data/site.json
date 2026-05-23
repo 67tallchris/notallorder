@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "logo_alt": "Not All Order logo",
+    "links": [
+      { "label": "Services", "href": "#" },
+      { "label": "Who I help", "href": "#" },
+      { "label": "How it works", "href": "#" },
+      { "label": "Results", "href": "#" }
+    ],
+    "cta_text": "Book a free call",
+    "cta_href": "#"
+  },
+  "hero": {
+    "eyebrow": "Digital strategy for small businesses",
+    "headline": "Your customers are out there. <em>Let's make sure</em> they find you.",
+    "subheading": "Most SMBs waste money talking to the wrong people, in the wrong language. I help you find your real target market — and make your message land.",
+    "primary_cta_text": "See how it works",
+    "primary_cta_href": "#",
+    "secondary_cta_text": "Book a free strategy call",
+    "secondary_cta_href": "#",
+    "trust_items": [
+      { "number": "1<span>on</span>1", "label": "Work directly with me" },
+      { "number": "SMB<span>↑</span>", "label": "Exclusively focused" },
+      { "number": "No<span>.</span> fluff", "label": "Strategy that works" }
+    ]
+  },
+  "services": [
+    {
+      "category": "Signature service",
+      "title": "Target market strategy",
+      "description": "Find & define who actually buys from you",
+      "color": "#004B8C"
+    },
+    {
+      "category": "Visibility",
+      "title": "SEO",
+      "description": "Show up when your customers search",
+      "color": "#7196BD"
+    },
+    {
+      "category": "Conversion",
+      "title": "Copywriting",
+      "description": "Words that resonate and convert",
+      "color": "#004B8C"
+    },
+    {
+      "category": "Full service",
+      "title": "Digital strategy",
+      "description": "A full plan built around your business",
+      "color": "#7196BD"
+    }
+  ],
+  "stats": [
+    { "value": "No <span>big agency</span>", "label": "Just you and me, Chris Porter" },
+    { "value": "<span>SEO</span> + Copy", "label": "Visibility & messaging" },
+    { "value": "ICP <span>→</span> Strategy", "label": "Ideal customer profiling" },
+    { "value": "<span>SMB</span> focused", "label": "Built for small businesses" }
+  ]
+}

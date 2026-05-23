@@ -1,0 +1,7 @@
+name = "notallorder-auth"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Set secrets with:
+#   wrangler secret put GITHUB_CLIENT_ID
+#   wrangler secret put GITHUB_CLIENT_SECRET
