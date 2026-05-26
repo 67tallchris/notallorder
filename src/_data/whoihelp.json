@@ -1,33 +1,33 @@
 {
   "eyebrow": "Is this you?",
-  "headline": "Built for small business owners <em>who are done guessing.</em>",
-  "subheading": "Not agencies. Not startups chasing VC. Small businesses with customers to find and revenue to grow.",
+  "headline": "<em>You've built something solid.</em> The next stage is the hard part.",
+  "subheading": "You're not a startup figuring out product-market fit. You've got customers, a team, and a track record. But the growth you had early on has leveled off, and you can feel the gap between where you are and where you want to be.",
   "profiles": [
     {
-      "title": "You're great at what you do, but marketing feels like guesswork",
-      "description": "You've built something real, but when it comes to reaching customers, nothing seems to stick. You try things, spend money, and still feel like you're shouting into the void."
+      "title": "You've had promising early wins with a new kind of customer, but haven't built a strategy around them yet",
+      "description": "A few deals have come in from a different type of buyer, or a new industry. There's clearly something there. But you're still mostly relying on the customers you've always had, and no one has sat down to figure out how to systematically reach more of those new ones."
     },
     {
-      "title": "You've tried things that haven't worked, and don't know why",
-      "description": "Maybe you've run ads, hired someone to do your socials, or redesigned your website. Some of it helped, most of it didn't. Nobody ever explained the strategy behind it."
+      "title": "Your messaging was built for yesterday's customer",
+      "description": "Your website, your pitch, your marketing materials, they were all written to reach the customers you used to pursue. But the market has shifted, or you have. The words aren't landing the way they used to, and new prospects aren't connecting the way your existing customers do."
     },
     {
-      "title": "You want someone who actually understands your business",
-      "description": "You're not after a package or a template. You want someone who takes the time to understand what you do, who you serve, and what actually makes sense for your situation."
+      "title": "You're not short on ideas. You're short on a clear strategy.",
+      "description": "You've got instincts about what should work. You've probably tried a few things. But without a clear picture of your next buyer and a strategy built around them, it keeps feeling like guessing. And you've built too much to leave the next chapter to chance."
     },
     {
-      "title": "You need real strategy, not more tactics",
-      "description": "You're not short on ideas, you're short on clarity. You need to know which direction to go before you start putting money and energy behind it."
+      "title": "You need a senior marketing partner, not another vendor",
+      "description": "You don't want someone to manage your socials or tweak your ads in isolation. You want someone who understands your business, can sit alongside your leadership, and help you think through the right moves before you make them."
     }
   ],
   "not_for": {
     "visible": true,
-    "headline": "Who I don't work with",
-    "description": "I keep my client list intentionally small so I can do my best work. I'm not the right fit for large companies with in-house marketing teams, businesses looking for a quick fix, or anyone who isn't ready to act on a strategy."
+    "headline": "Who this isn't for",
+    "description": "I work with a small number of clients at a time so the work is done properly. This isn't the right fit for businesses still searching for product-market fit, companies looking for someone to run tactics without a strategy behind them, or anyone not ready to act on what we build together."
   },
   "cta": {
-    "headline": "Sound familiar?",
-    "subheading": "Let's talk about where you are and where you want to get to.",
+    "headline": "Does this sound like where you are?",
+    "subheading": "Let's talk about what's holding back your growth and what a clear strategy could change.",
     "button_text": "Book a free strategy call",
     "button_href": "/contact/"
   }

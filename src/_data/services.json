@@ -1,24 +1,24 @@
 {
-  "eyebrow": "What I offer",
-  "headline": "The right service for <em>where you are</em> right now.",
-  "subheading": "Whether you need to nail your target market, get found on Google, write words that convert, or build a complete digital strategy, there's a service built for that.",
+  "eyebrow": "The work we do together",
+  "headline": "Strategy that starts with <em>your next customer,</em> not a template.",
+  "subheading": "Every engagement begins with understanding who you're actually trying to reach and what they need to hear. The strategy, the copy, the channels, all of it follows from that foundation.",
   "items": [
     {
-      "category": "Signature service",
+      "category": "Foundation",
       "title": "Target market strategy",
-      "description": "Most small businesses market to everyone. That means they reach no one. I help you get precise about who your customer actually is, then build everything else around that clarity.",
+      "description": "You've been successful with a certain kind of customer. But you can feel there's a bigger opportunity, and maybe you've already had a few early wins with a different type of buyer. This is where we get precise about who that next customer is, what they need to hear, and how to position your business to reach more of them.",
       "deliverables": [
-        "ICP deep-dive session",
-        "Customer persona development",
+        "Ideal customer profile (ICP) development",
+        "Buyer persona research & documentation",
         "Messaging framework",
-        "Positioning statement"
+        "Positioning statement for your next market"
       ],
       "color": "#004B8C"
     },
     {
       "category": "Visibility",
       "title": "SEO",
-      "description": "If your customers are searching for what you do and you're not showing up, you're invisible. I make sure the right people find you at the right moment, without paying for every click.",
+      "description": "Your next customer is out there searching for what you do right now. If they find a competitor instead of you, that's a gap worth closing. SEO built around your target buyer means you're found by the right people at the right moment, without paying for every click.",
       "deliverables": [
         "Keyword research & mapping",
         "On-page optimisation",
@@ -30,7 +30,7 @@
     {
       "category": "Conversion",
       "title": "Copywriting",
-      "description": "Most business copy is forgettable. Yours doesn't have to be. I write words that speak directly to your customer in language they recognise, and move them to act.",
+      "description": "Most business copy was written for the customer who got you here. When you're going after someone new, your words need to change too. I write copy that speaks directly to your next buyer in their language, so your website, emails, and materials actually move them to act.",
       "deliverables": [
         "Website copy",
         "Landing pages",
@@ -42,19 +42,19 @@
     {
       "category": "Full service",
       "title": "Digital strategy",
-      "description": "If you want the full picture of where you are, where you need to go, and exactly how to get there, this is it. A complete digital strategy built around your business, not a template.",
+      "description": "For businesses ready to commit to a new phase of growth. We map where you are, define who your next customer is, and build a complete strategy to reach them across every relevant channel. This is the whole picture, not just one piece of it.",
       "deliverables": [
         "Full digital audit",
-        "Channel strategy",
-        "90-day action plan",
-        "Ongoing support"
+        "Buyer persona development",
+        "Channel strategy & GTM plan",
+        "90-day action plan with ongoing support"
       ],
       "color": "#7196BD"
     }
   ],
   "cta": {
-    "headline": "Not sure which service is right for you?",
-    "subheading": "Book a free call and we'll figure it out together. No pitch, no pressure.",
+    "headline": "Not sure where to start?",
+    "subheading": "Book a free call and we'll work out the right first step together. No pitch, no pressure.",
     "button_text": "Book a free strategy call",
     "button_href": "/contact/"
   }

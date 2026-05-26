@@ -1,7 +1,7 @@
 {
   "eyebrow": "What clients say",
-  "headline": "Real results for <em>real small businesses.</em>",
-  "subheading": "Here's what happens when you stop guessing and start with strategy.",
+  "headline": "What changes when you <em>know who you're talking to.</em>",
+  "subheading": "The businesses that see the biggest shifts aren't always the ones that do the most. They're the ones that finally get clear on who they're trying to reach, and build everything around that.",
   "testimonials": [
     {
       "quote": "Chris helped us identify exactly who we were talking to, and suddenly everything clicked. Our website enquiries doubled within three months and we finally felt like we were speaking to the right people.",
@@ -21,16 +21,16 @@
   ],
   "outcomes": {
     "visible": true,
-    "headline": "What you can expect",
+    "headline": "What the work actually changes",
     "items": [
-      { "stat": "Clarity", "description": "On who your customer is and how to reach them" },
-      { "stat": "Confidence", "description": "To invest in marketing that's right for your business" },
-      { "stat": "Direction", "description": "A clear plan you can act on straight away" }
+      { "stat": "Clarity", "description": "A documented picture of your next customer: who they are, what they care about, and what they need to hear" },
+      { "stat": "Messaging", "description": "Copy and positioning built for the buyer you want to reach, not the one you already have" },
+      { "stat": "Direction", "description": "A prioritised plan with a clear logic, not a list of tactics to figure out on your own" }
     ]
   },
   "cta": {
-    "headline": "Let's get you results like these.",
-    "subheading": "Book a free call and let's talk about what's possible for your business.",
+    "headline": "Ready to stop guessing?",
+    "subheading": "Book a free call and let's talk about what growth looks like for your business.",
     "button_text": "Book a free strategy call",
     "button_href": "/contact/"
   }

@@ -1,14 +1,14 @@
 {
   "eyebrow": "Get in touch",
-  "headline": "Let's talk about <em>your business.</em>",
-  "subheading": "Fill in the form and I'll get back to you within one business day.",
+  "headline": "Let's talk about <em>what's next</em> for your business.",
+  "subheading": "Tell me where you are and what you're trying to figure out. I'll get back to you within one business day.",
   "form": {
     "fields": {
       "name_label": "Your name",
       "email_label": "Your email",
       "business_label": "What does your business do?",
       "service_label": "What are you looking for help with?",
-      "message_label": "Anything else you'd like me to know?"
+      "message_label": "Where has growth stalled, and what do you think the next stage looks like?"
     },
     "service_options": [
       "Target market strategy",
@@ -25,7 +25,7 @@
     "headline": "What happens next",
     "steps": [
       { "title": "I'll be in touch within a day", "description": "Usually much sooner. If it's urgent, say so in your message." },
-      { "title": "We'll find a time to talk", "description": "If it sounds like a good fit, I'll suggest a free 30-minute call to dig into the details." }
+      { "title": "We'll find a time to talk", "description": "If it sounds like a good fit, I'll suggest a free 30-minute call to dig into where you are and what the right next step looks like." }
     ]
   }
 }

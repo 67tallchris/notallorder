@@ -10,49 +10,49 @@
     "cta_href": "/contact/"
   },
   "hero": {
-    "eyebrow": "Digital strategy for small businesses",
-    "headline": "Your customers are out there. <em>Let's make sure</em> they find you.",
-    "subheading": "Most SMBs waste money talking to the wrong people, in the wrong language. I help you find your real target market and make your message land.",
+    "eyebrow": "Fractional CMO for established businesses",
+    "headline": "You've built something real. <em>Now let's find your next customer.</em>",
+    "subheading": "You've proven your model. You have loyal customers and a strong track record. But growth has plateaued, and there's a bigger market you haven't fully reached yet. I help established businesses get clear on who that next customer is, and build the strategy to reach them.",
     "primary_cta_text": "See how it works",
-    "primary_cta_href": "/contact/",
+    "primary_cta_href": "/how-it-works/",
     "secondary_cta_text": "Book a free strategy call",
     "secondary_cta_href": "/contact/",
     "trust_items": [
-      { "number": "1<span>on</span>1", "label": "Work directly with me" },
-      { "number": "SMB<span>↑</span>", "label": "Exclusively focused" },
-      { "number": "No<span>.</span> fluff", "label": "Strategy that works" }
+      { "number": "Frac<span>.</span>CMO", "label": "Senior strategy without the overhead" },
+      { "number": "Buyer<span>-</span>led", "label": "Built around your real customers" },
+      { "number": "No<span>.</span> fluff", "label": "Actionable strategy, not slide decks" }
     ]
   },
   "services": [
     {
-      "category": "Signature service",
+      "category": "Foundation",
       "title": "Target market strategy",
-      "description": "Find & define who actually buys from you",
+      "description": "Get precise on who your next customer is, before you spend another dollar reaching them",
       "color": "#004B8C"
     },
     {
       "category": "Visibility",
       "title": "SEO",
-      "description": "Show up when your customers search",
+      "description": "Show up when your next customer goes looking for what you offer",
       "color": "#7196BD"
     },
     {
       "category": "Conversion",
       "title": "Copywriting",
-      "description": "Words that resonate and convert",
+      "description": "Language built for the buyer you want, not the one you already have",
       "color": "#004B8C"
     },
     {
       "category": "Full service",
       "title": "Digital strategy",
-      "description": "A full plan built around your business",
+      "description": "A complete plan for the next stage of growth, built around your next customer",
       "color": "#7196BD"
     }
   ],
   "stats": [
-    { "value": "No <span>big agency</span>", "label": "Just you and me, Chris Porter" },
-    { "value": "<span>SEO</span> + Copy", "label": "Visibility & messaging" },
-    { "value": "ICP <span>→</span> Strategy", "label": "Ideal customer profiling" },
-    { "value": "<span>SMB</span> focused", "label": "Built for small businesses" }
+    { "value": "Frac<span>tional</span> CMO", "label": "Senior marketing leadership, without the full-time hire" },
+    { "value": "Buyer <span>personas</span>", "label": "Built from real customer insight, not assumptions" },
+    { "value": "GTM <span>strategy</span>", "label": "A plan your team can actually execute" },
+    { "value": "<span>Established</span> biz", "label": "For companies with traction, ready for more" }
   ]
 }

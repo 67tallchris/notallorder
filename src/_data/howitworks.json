@@ -1,36 +1,36 @@
 {
   "eyebrow": "The process",
-  "headline": "Four steps from <em>where you are</em> to where you want to be.",
-  "subheading": "No long retainers before we've even started. No jargon. Just a clear process that moves at your pace and keeps you in control.",
+  "headline": "From plateau to a plan you can <em>actually execute.</em>",
+  "subheading": "The work starts with your customer, not a template. Everything we build together comes from a genuine understanding of who you're trying to reach and what they need to hear from you.",
   "steps": [
     {
       "number": "01",
       "title": "Free strategy call",
-      "description": "We talk about your business, your goals, and your challenges. This is a genuine conversation, not a discovery call designed to end in a sales pitch. If we're a good fit, great. If not, I'll point you in the right direction.",
+      "description": "We talk about your business, where growth has stalled, and what you think is on the other side of it. This isn't a pitch. It's a real conversation to understand where you are and whether working together makes sense. If we're a good fit, great. If not, I'll tell you honestly.",
       "duration": "30 minutes"
     },
     {
       "number": "02",
-      "title": "Discovery & research",
-      "description": "I dig into your market, your competitors, and your customers. I ask questions, look at data, and spend time understanding your business properly. This is where the real insight comes from, and it's what makes everything else work.",
+      "title": "Customer & market discovery",
+      "description": "This is the most important part of the engagement. I dig into your market, your competitors, and your customers through real research: who your best customers are, what brought them to you, what signals exist in your early wins with new types of buyers, and what it would take to reach more of them. This is where the real insight comes from, and it's what makes everything that follows actually work.",
       "duration": "1–2 weeks"
     },
     {
       "number": "03",
       "title": "Strategy delivery",
-      "description": "You get a clear, actionable strategy: not a 50-page document you'll never read, but a focused plan you can actually use. We walk through it together so there are no unanswered questions.",
+      "description": "You get a clear, actionable strategy built around your next customer. Not a 50-page document you'll never open again, but a focused plan that defines who you're targeting, what they need to hear, and how to reach them. We walk through it together so there are no unanswered questions.",
       "duration": "1 session"
     },
     {
       "number": "04",
-      "title": "Support & iteration",
-      "description": "I don't disappear after delivery. We check in, review what's working, and adjust as needed. Whether you want ongoing support or just a hand getting started, I'm here.",
+      "title": "Execution & iteration",
+      "description": "A strategy is only valuable if it gets used. I stay involved to help you implement, review what's working, and adjust as you learn more about your new customer base. Whether that's ongoing support or getting the first phase off the ground, I don't disappear after delivery.",
       "duration": "Ongoing"
     }
   ],
   "cta": {
-    "headline": "Ready to get started?",
-    "subheading": "Step one is always free. Book a call and let's see where it goes.",
+    "headline": "The first step is always a conversation.",
+    "subheading": "Book a free call and let's talk about what growth looks like for your business.",
     "button_text": "Book your free strategy call",
     "button_href": "/contact/"
   }
