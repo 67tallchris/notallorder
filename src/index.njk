@@ -30,12 +30,11 @@ h1 em { font-style: normal; color: #004B8C; }
 .trust-div { width: 1px; height: 36px; background: #dddbd4; }
 .hero-right { display: flex; flex-direction: column; gap: 1.25rem; align-items: center; }
 .logo-card {
-  background: #fff; border-radius: 16px;
-  border: 1px solid #dddbd4; padding: 2.5rem 3rem;
-  display: flex; align-items: center; justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
   width: 100%;
 }
-.logo-card img { height: 220px; width: auto; }
+.logo-card img { width: 100%; height: 320px; object-fit: cover; object-position: top; display: block; }
 .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
 .sc {
   background: #fff; border-radius: 10px;
@@ -86,7 +85,7 @@ h1 em { font-style: normal; color: #004B8C; }
 
   <div class="hero-right">
     <div class="logo-card">
-      <img src="/assets/logo.png" alt="{{ site.nav.logo_alt }}">
+      <img src="/assets/profile.jpg" alt="Chris Porter">
     </div>
     <div class="service-grid">
       {% for svc in site.services %}
