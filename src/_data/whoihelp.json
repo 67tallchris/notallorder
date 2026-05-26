@@ -1,14 +1,14 @@
 {
   "eyebrow": "Is this you?",
   "headline": "Built for small business owners <em>who are done guessing.</em>",
-  "subheading": "Not agencies. Not startups chasing VC. Small, real businesses with real customers to find and real revenue to grow.",
+  "subheading": "Not agencies. Not startups chasing VC. Small businesses with customers to find and revenue to grow.",
   "profiles": [
     {
-      "title": "You're great at what you do — but marketing feels like guesswork",
+      "title": "You're great at what you do, but marketing feels like guesswork",
       "description": "You've built something real, but when it comes to reaching customers, nothing seems to stick. You try things, spend money, and still feel like you're shouting into the void."
     },
     {
-      "title": "You've tried things that haven't worked — and don't know why",
+      "title": "You've tried things that haven't worked, and don't know why",
       "description": "Maybe you've run ads, hired someone to do your socials, or redesigned your website. Some of it helped, most of it didn't. Nobody ever explained the strategy behind it."
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "title": "You need real strategy, not more tactics",
-      "description": "You're not short on ideas — you're short on clarity. You need to know which direction to go before you start putting money and energy behind it."
+      "description": "You're not short on ideas, you're short on clarity. You need to know which direction to go before you start putting money and energy behind it."
     }
   ],
   "not_for": {

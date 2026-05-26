@@ -24,7 +24,6 @@
   "reassurance": {
     "headline": "What happens next",
     "steps": [
-      { "title": "I'll read your message", "description": "I take time to understand your situation before responding — you won't get a generic reply." },
       { "title": "I'll be in touch within a day", "description": "Usually much sooner. If it's urgent, say so in your message." },
       { "title": "We'll find a time to talk", "description": "If it sounds like a good fit, I'll suggest a free 30-minute call to dig into the details." }
     ]
