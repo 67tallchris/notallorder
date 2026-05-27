@@ -20,7 +20,7 @@
     "trust_items": [
       { "number": "Your CMO", "label": "Senior strategy without the overhead" },
       { "number": "Buyer<span>-</span>led", "label": "Built around your real customers" },
-      { "number": "No<span>.</span> fluff", "label": "Actionable strategy, not slide decks" }
+      { "number": "No fluff", "label": "Actionable strategy, not slide decks" }
     ]
   },
   "services": [
