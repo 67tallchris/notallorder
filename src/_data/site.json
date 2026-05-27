@@ -18,7 +18,7 @@
     "secondary_cta_text": "Book a free strategy call",
     "secondary_cta_href": "/contact/",
     "trust_items": [
-      { "number": "Frac<span>.</span>CMO", "label": "Senior strategy without the overhead" },
+      { "number": "Your CMO", "label": "Senior strategy without the overhead" },
       { "number": "Buyer<span>-</span>led", "label": "Built around your real customers" },
       { "number": "No<span>.</span> fluff", "label": "Actionable strategy, not slide decks" }
     ]
