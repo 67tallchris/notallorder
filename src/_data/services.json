@@ -16,14 +16,15 @@
       "color": "#004B8C"
     },
     {
-      "category": "Visibility",
-      "title": "SEO",
-      "description": "Your next customer is out there searching for what you do right now. If they find a competitor instead of you, that's a gap worth closing. SEO built around your target buyer means you're found by the right people at the right moment, without paying for every click.",
+      "category": "Enablement",
+      "title": "Sales Enablement",
+      "description": "In most small B2B businesses, the person closing deals is also running the company — or juggling three other roles. I build the messaging, materials, and targeting strategy that make every sales conversation more intentional. So whether it's the CEO walking into a room or a generalist making outreach calls, they're showing up prepared and saying the right thing to the right buyer.",
       "deliverables": [
-        "Keyword research & mapping",
-        "On-page optimisation",
-        "Content strategy",
-        "Technical audit & recommendations"
+        "One-pagers & leave-behinds",
+        "Sales deck & presentation templates",
+        "Outreach messaging & email scripts",
+        "Objection handling guides",
+        "Target account strategy & prioritization"
       ],
       "color": "#7196BD"
     },
@@ -42,7 +43,7 @@
     {
       "category": "Full service",
       "title": "Digital strategy",
-      "description": "For businesses ready to commit to a new phase of growth. We map where you are, define who your next customer is, and build a complete strategy to reach them across every relevant channel. This is the whole picture, not just one piece of it.",
+      "description": "For businesses ready to commit to a new phase of growth. We map where you are, define who your next customer is, and build a complete strategy to reach them — through the right channels, whether that's search, content, outreach, or sales conversations. This is the whole picture, not just one piece of it.",
       "deliverables": [
         "Full digital audit",
         "Buyer persona development",
