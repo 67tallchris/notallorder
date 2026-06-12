@@ -11,6 +11,10 @@ if (document.querySelector('.sc')) {
   tasks.push(import('/js/fx/card-tilt.js').then((m) => m.init()));
 }
 
+if (document.querySelector('.steps .step')) {
+  tasks.push(import('/js/fx/journey.js').then((m) => m.init()));
+}
+
 if (document.querySelector('.hero')) {
   tasks.push(import('/js/fx/hero-field.js').then((m) => m.init()));
 }
