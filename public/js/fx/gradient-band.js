@@ -30,7 +30,7 @@ const FRAG = /* glsl */ `
   void main() {
     vec2 p = vUv;
     p.x *= uAspect;
-    float t = uTime * 0.05;
+    float t = uTime * 0.09;
 
     vec2 c1 = vec2(uAspect * (0.25 + 0.18 * sin(t * 1.10)), 0.45 + 0.30 * cos(t * 0.90));
     vec2 c2 = vec2(uAspect * (0.70 + 0.20 * cos(t * 0.70)), 0.55 + 0.28 * sin(t * 1.30));
@@ -42,7 +42,7 @@ const FRAG = /* glsl */ `
 
     vec3 col = NAVY;
     col = mix(col, NAVY_DEEP, b1 * 0.85);
-    col = mix(col, STEEL,     b2 * 0.28);
+    col = mix(col, STEEL,     b2 * 0.45);
     col = mix(col, NAVY_DEEP, b3 * 0.55);
 
     // Gentle vertical vignette so band edges stay anchored

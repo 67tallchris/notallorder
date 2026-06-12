@@ -30,7 +30,7 @@ const VERT = /* glsl */ `
     p.y -= uPointer.y * (0.3 + p.z * 0.06);
 
     vec4 mv = modelViewMatrix * vec4(p, 1.0);
-    gl_PointSize = (2.2 + aOrder * 1.6) * (10.0 / -mv.z);
+    gl_PointSize = (3.0 + aOrder * 2.2) * (10.0 / -mv.z);
     gl_Position = projectionMatrix * mv;
   }
 `;
@@ -47,7 +47,7 @@ const FRAG = /* glsl */ `
     float d = length(gl_PointCoord - 0.5);
     float a = smoothstep(0.5, 0.15, d);
     vec3 col = mix(GREY, NAVY, vOrder);
-    float alpha = a * (0.18 + vOrder * 0.30);
+    float alpha = a * (0.30 + vOrder * 0.40);
     gl_FragColor = vec4(col, alpha);
   }
 `;
