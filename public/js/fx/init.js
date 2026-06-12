@@ -3,6 +3,8 @@
 
 const tasks = [];
 
+tasks.push(import('/js/fx/reveal.js').then((m) => m.init()));
+
 if (document.querySelector('.stats-bar, .cta-band')) {
   tasks.push(import('/js/fx/gradient-band.js').then((m) => m.init()));
 }
