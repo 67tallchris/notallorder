@@ -1,5 +1,6 @@
 ---
 title: Get in Touch | No Tall Order
+description: "Book a free 30-minute strategy call. Tell me where growth has stalled and I'll get back to you within one business day."
 ---
 {% extends "base.njk" %}
 {% block styles %}
@@ -8,6 +9,9 @@ title: Get in Touch | No Tall Order
   padding: 3.5rem 2.5rem;
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
   align-items: start;
+}
+@media (max-width: 760px) {
+  .contact-body { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem 1.25rem; }
 }
 
 /* ── Form ── */

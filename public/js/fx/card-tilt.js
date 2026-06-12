@@ -7,8 +7,11 @@ export function init() {
   if (matchMedia('(hover: none)').matches) return;
 
   document.querySelectorAll('.sc').forEach((card) => {
-    card.style.transition = 'transform 0.18s ease-out, box-shadow 0.25s ease-out';
-    card.style.willChange = 'transform';
+    // Set inline transition lazily so it can't clobber the scroll-reveal
+    card.addEventListener('pointerenter', () => {
+      card.style.transition = 'transform 0.18s ease-out, box-shadow 0.25s ease-out';
+      card.style.willChange = 'transform';
+    });
 
     card.addEventListener('pointermove', (e) => {
       const r = card.getBoundingClientRect();

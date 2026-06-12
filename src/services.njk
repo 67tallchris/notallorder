@@ -1,5 +1,6 @@
 ---
 title: Services | No Tall Order
+description: "Target market strategy, sales enablement, copywriting, and digital strategy — built around your next customer, not a template."
 ---
 {% extends "base.njk" %}
 {% block styles %}
@@ -31,6 +32,9 @@ title: Services | No Tall Order
 .sc-deliverables li::before {
   content: ""; width: 6px; height: 6px; border-radius: 50%;
   background: var(--accent); flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .service-card { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem 1.25rem; }
 }
 {% endblock %}
 
