@@ -104,5 +104,15 @@ nav {
 
 {% block content %}{% endblock %}
 
+<script type="module">
+  // Progressive enhancement: dynamic 3D/motion layer.
+  // Skipped for reduced-motion users; loaded after the page is fully rendered.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (document.readyState === 'complete') import('/js/fx/init.js');
+    else addEventListener('load', () => import('/js/fx/init.js'), { once: true });
+  }
+</script>
+{% block scripts %}{% endblock %}
+
 </body>
 </html>
