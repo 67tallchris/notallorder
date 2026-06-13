@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "eleventy",
+    "build": "rm -rf _site && eleventy",
     "start": "eleventy --serve",
     "deploy": "npm run build && wrangler deploy",
     "preview": "npm run build && wrangler dev"
