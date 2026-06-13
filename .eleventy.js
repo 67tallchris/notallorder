@@ -4,6 +4,9 @@ module.exports = function (eleventyConfig) {
   // Pass admin folder through unchanged
   eleventyConfig.addPassthroughCopy("src/admin");
 
+  // ISO date filter for sitemap
+  eleventyConfig.addFilter("dateToISO", (d) => new Date(d).toISOString());
+
   return {
     dir: {
       input: "src",
