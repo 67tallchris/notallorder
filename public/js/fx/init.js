@@ -13,7 +13,7 @@ if (document.querySelector('.sc')) {
   tasks.push(import('/js/fx/card-tilt.js').then((m) => m.init()));
 }
 
-if (document.querySelector('.steps .step')) {
+if (document.querySelector('.steps .step, .timeline .story-item')) {
   tasks.push(import('/js/fx/journey.js').then((m) => m.init()));
 }
 

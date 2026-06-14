@@ -1,11 +1,10 @@
-// Scroll-driven journey line for the "How it works" steps.
+// Scroll-driven journey line for timeline layouts.
 // A 3D tube draws itself down the timeline gutter as you scroll; a glowing
-// node lights up (and the step number turns navy) as each step activates.
-// The line starts muted grey and resolves into brand navy — plateau to plan.
+// node lights up (and a key element activates) as each item enters.
+// Used on both the how-it-works page (.steps) and the my-story page (.timeline).
 
 import * as THREE from '/js/vendor/three.module.min.js';
 
-const GUTTER_X = 44;     // line centerline within the 96px gutter
 const NODE_R = 7;
 const HALO_R = 15;
 
@@ -36,13 +35,9 @@ const TUBE_FRAG = /* glsl */ `
   }
 `;
 
-export function init() {
-  const steps = document.querySelector('.steps');
-  if (!steps) return;
-
-  const cards = [...steps.querySelectorAll('.step')];
-  if (cards.length < 2) return;
-
+// computeGutterX(container, containerRect) → number
+// computeNodeY(card, containerRect) → number
+function createJourney(container, cards, computeGutterX, computeNodeY) {
   // ── Card reveal (all viewports) ──
   cards.forEach((c) => c.classList.add('fx-pre'));
   const revealIO = new IntersectionObserver(
@@ -61,10 +56,13 @@ export function init() {
   // ── Journey line (desktop only — gutter collapses on mobile) ──
   if (matchMedia('(max-width: 760px)').matches) return;
 
+  // Signal to CSS that Three.js is managing the line/dots
+  container.classList.add('fx-journey-active');
+
   const canvas = document.createElement('canvas');
   canvas.className = 'fx-journey-canvas';
   canvas.setAttribute('aria-hidden', 'true');
-  steps.prepend(canvas);
+  container.prepend(canvas);
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -74,7 +72,7 @@ export function init() {
 
   const tubeUniforms = { uProgress: { value: 0 } };
   let tube = null;
-  let nodes = []; // { group, core, halo, y, lit, t (0..1 activation) }
+  let nodes = []; // { group, core, halo, y, card, lit, t }
 
   const navyMat = () => new THREE.MeshBasicMaterial({ color: 0x004b8c, transparent: true });
   const haloMat = () =>
@@ -90,31 +88,27 @@ export function init() {
     nodes.forEach((n) => scene.remove(n.group));
     nodes = [];
 
-    const w = steps.clientWidth;
-    const h = steps.clientHeight;
+    const w = container.clientWidth;
+    const h = container.clientHeight;
     renderer.setSize(w, h, false);
     camera = new THREE.OrthographicCamera(0, w, 0, -h, -200, 200);
 
-    const stepsRect = steps.getBoundingClientRect();
-
-    // Node anchor: vertically aligned with each step number
-    const anchors = cards.map((c) => {
-      const r = c.getBoundingClientRect();
-      return r.top - stepsRect.top + 56;
-    });
+    const containerRect = container.getBoundingClientRect();
+    const gutterX = computeGutterX(container, containerRect);
+    const anchors = cards.map((c) => computeNodeY(c, containerRect));
 
     // Curve: enters flat-ish at the top, waves through the gutter, exits below
     const pts = [];
-    pts.push(new THREE.Vector3(GUTTER_X - 14, 6, -10));
+    pts.push(new THREE.Vector3(gutterX - 14, 6, -10));
     anchors.forEach((y, i) => {
       if (i > 0) {
         const midY = (anchors[i - 1] + y) / 2;
         const sway = i % 2 === 0 ? -16 : 16;
-        pts.push(new THREE.Vector3(GUTTER_X + sway, -midY, i % 2 === 0 ? -14 : 14));
+        pts.push(new THREE.Vector3(gutterX + sway, -midY, i % 2 === 0 ? -14 : 14));
       }
-      pts.push(new THREE.Vector3(GUTTER_X, -y, 0));
+      pts.push(new THREE.Vector3(gutterX, -y, 0));
     });
-    pts.push(new THREE.Vector3(GUTTER_X + 18, -(h - 8), 12));
+    pts.push(new THREE.Vector3(gutterX + 18, -(h - 8), 12));
 
     const curve = new THREE.CatmullRomCurve3(pts, false, 'catmullrom', 0.6);
     tube = new THREE.Mesh(
@@ -129,7 +123,6 @@ export function init() {
     );
     scene.add(tube);
 
-    // Activation point of each node along the curve (by vertical position)
     anchors.forEach((y, i) => {
       const group = new THREE.Group();
       const core = new THREE.Mesh(new THREE.CircleGeometry(NODE_R, 32), navyMat());
@@ -138,7 +131,7 @@ export function init() {
         haloMat()
       );
       group.add(halo, core);
-      group.position.set(GUTTER_X, -y, 20);
+      group.position.set(gutterX, -y, 20);
       group.scale.setScalar(0.001);
       scene.add(group);
       nodes.push({ group, core, halo, y, card: cards[i], lit: false, t: 0 });
@@ -146,12 +139,12 @@ export function init() {
   }
 
   build();
-  new ResizeObserver(() => requestAnimationFrame(build)).observe(steps);
+  new ResizeObserver(() => requestAnimationFrame(build)).observe(container);
 
   // ── Scroll → draw progress ──
   let target = 0;
   function onScroll() {
-    const r = steps.getBoundingClientRect();
+    const r = container.getBoundingClientRect();
     // Head of the line tracks ~70% down the viewport
     target = THREE.MathUtils.clamp((innerHeight * 0.7 - r.top) / r.height, 0, 1);
   }
@@ -163,14 +156,14 @@ export function init() {
   new IntersectionObserver(([e]) => {
     if (e.isIntersecting) renderer.setAnimationLoop(tick);
     else renderer.setAnimationLoop(null);
-  }).observe(steps);
+  }).observe(container);
 
   function tick() {
     const dt = Math.min(clock.getDelta(), 0.05);
     const u = tubeUniforms.uProgress;
     u.value += (target - u.value) * Math.min(dt * 4, 1);
 
-    const h = steps.clientHeight;
+    const h = container.clientHeight;
     const headY = u.value * h;
     const time = clock.elapsedTime;
 
@@ -189,5 +182,45 @@ export function init() {
     }
 
     renderer.render(scene, camera);
+  }
+}
+
+export function init() {
+  // ── How-it-works page ──
+  const steps = document.querySelector('.steps');
+  if (steps) {
+    const cards = [...steps.querySelectorAll('.step')];
+    if (cards.length >= 2) {
+      createJourney(
+        steps,
+        cards,
+        () => 44,
+        (card, containerRect) => card.getBoundingClientRect().top - containerRect.top + 56
+      );
+    }
+  }
+
+  // ── My-story page ──
+  const timeline = document.querySelector('.timeline');
+  if (timeline) {
+    const cards = [...timeline.querySelectorAll('.story-item')];
+    if (cards.length >= 2) {
+      createJourney(
+        timeline,
+        cards,
+        (container) => {
+          // Centre on where the CSS dot sits: left edge of .story-body + 6px (half of 12px dot)
+          const body = container.querySelector('.story-body');
+          if (!body) return 132;
+          return body.getBoundingClientRect().left - container.getBoundingClientRect().left + 6;
+        },
+        (card, containerRect) => {
+          // Align with the dot's vertical centre (top: 4px of .story-body, dot height 12px → centre at 10px)
+          const body = card.querySelector('.story-body');
+          const ref = body || card;
+          return ref.getBoundingClientRect().top - containerRect.top + 10;
+        }
+      );
+    }
   }
 }
