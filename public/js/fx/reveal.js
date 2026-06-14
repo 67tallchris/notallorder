@@ -9,6 +9,8 @@ const SELECTORS = [
   '.profile-card',    // who-i-help
   '.not-for',
   '.reassurance-step',// contact
+  '.story-item',      // my-story timeline
+  '.tl-card',         // my-story throughlines
   '.result-card',     // results (if/when used)
 ];
 

@@ -1,0 +1,60 @@
+{
+  "eyebrow": "The story behind No Tall Order",
+  "headline": "I didn't learn marketing in a classroom. <em>I learned it by doing the work.</em>",
+  "subheading": "For more than a decade I've helped businesses figure out who their next customer is and how to reach them — not from a textbook, but by rolling up my sleeves with real companies, across a dozen industries and just about every channel there is. Here's how I got here.",
+  "milestones": [
+    {
+      "year": "2014",
+      "title": "It started by showing up",
+      "description": "I launched No Tall Order and did something simple: I approached local businesses and offered a few hours of marketing help, for free. I ran social media for Ben's Bells, helped a local co-working space build referral marketing strategies, and organized a weekly meetup for programmers called \"Nerd Row\" that brought the space several new members. That same year, I was invited to sit on a \"Shark Tank\" panel judging business plans for the Women's Business Center in Tucson."
+    },
+    {
+      "year": "The first big client",
+      "title": "Learning that marketing is orchestration",
+      "description": "My first major project was redesigning a financial company's website. I project-managed the whole thing end to end and brought in developer friends to handle the technical build. It taught me early that great marketing is as much about coordinating the right people and moving parts as it is about ideas."
+    },
+    {
+      "year": "2019",
+      "title": "Taking marketing to the skies",
+      "description": "I picked up a drone and started doing videography projects, partnering with Paul Holze and Groundwork Promotions. I founded Falcon Flight Photography and built an LLC around the work — adding video and visual storytelling to my toolkit."
+    },
+    {
+      "year": "2020",
+      "title": "Pivoting when the world stopped",
+      "description": "When the pandemic shut down in-person videography, I leaned into what still worked: digital. I was already helping OOROO Auto with their marketing, and I turned to LinkedIn to reach new customers and generate referrals for their business. (I also met my wife at OOROO — the best referral I ever got.)"
+    },
+    {
+      "year": "2020–2025",
+      "title": "500+ campaigns, every channel",
+      "description": "I teamed up with Danny Kirk at Kirk & Co, where we ran marketing campaigns for more than 500 B2B businesses. Cold email, podcasts, Reddit, and more — I learned what actually moves the needle across industries, and just as importantly, what doesn't."
+    },
+    {
+      "year": "Now",
+      "title": "Going deeper, not wider",
+      "description": "After years of project-based work, I'm changing how I work. Instead of one-off projects, I want to embed with a small number of established companies — just four to six — as their fractional CMO: refining the message, building campaigns to reach new customers, and tracking what's working every step of the way."
+    }
+  ],
+  "throughlines": {
+    "headline": "What it all adds up to",
+    "items": [
+      {
+        "title": "Channel-agnostic",
+        "description": "Cold email, social, video, podcasts, Reddit, referral systems — I've run real campaigns across all of them, so I recommend what fits your buyer, not my favorite tactic."
+      },
+      {
+        "title": "An operator, not a theorist",
+        "description": "I've project-managed builds, hired teams, founded companies, and pivoted through a pandemic. I know how the work actually gets done, not just how it's supposed to."
+      },
+      {
+        "title": "Built around the next customer",
+        "description": "Every chapter of this came back to one thing: helping businesses find new customers and giving them a system to reach more of them."
+      }
+    ]
+  },
+  "cta": {
+    "headline": "Want to be one of those four to six companies?",
+    "subheading": "If you've built something solid and you're ready to reach your next customer, let's talk about what that could look like.",
+    "button_text": "Book a free strategy call",
+    "button_href": "/contact/"
+  }
+}
