@@ -1,9 +1,9 @@
 {
   "meta": {
-    "default_description": "Fractional CMO for established businesses. Get clear on who your next customer is and build the strategy to reach them — senior marketing leadership without the full-time hire."
+    "default_description": "Digital Marketing Consultant for established businesses. Get clear on who your next customer is and build the strategy to reach them — senior marketing leadership without the full-time hire."
   },
   "profile": {
-    "alt": "Chris Porter, fractional CMO at No Tall Order"
+    "alt": "Chris Porter, Digital Marketing Consultant at No Tall Order"
   },
   "footer": {
     "tagline": "Senior marketing strategy for established businesses ready to find their next customer.",
@@ -21,7 +21,7 @@
     "cta_href": "/contact/"
   },
   "hero": {
-    "eyebrow": "Fractional CMO for established businesses",
+    "eyebrow": "Digital Marketing Consultant for established businesses",
     "headline": "You've built something great. <em>Now let's find your next customer.</em>",
     "subheading": "You've proven your model. You have loyal customers and a strong track record. But growth has plateaued, and there's a bigger market you haven't fully reached yet. I help established businesses get clear on who that next customer is, and build the strategy to reach them.",
     "primary_cta_text": "See how it works",
@@ -29,7 +29,7 @@
     "secondary_cta_text": "Book a free strategy call",
     "secondary_cta_href": "/contact/",
     "trust_items": [
-      { "number": "Your CMO", "label": "Senior strategy without the overhead" },
+      { "number": "Your consultant", "label": "Senior strategy without the overhead" },
       { "number": "Buyer<span>-</span>led", "label": "Built around your real customers" },
       { "number": "No fluff", "label": "Actionable strategy, not slide decks" }
     ]
@@ -61,7 +61,7 @@
     }
   ],
   "stats": [
-    { "value": "Frac<span>tional</span> CMO", "label": "Senior marketing leadership, without the full-time hire" },
+    { "value": "Digital <span>Marketing</span> Consultant", "label": "Senior marketing leadership, without the full-time hire" },
     { "value": "Buyer <span>personas</span>", "label": "Built from real customer insight, not assumptions" },
     { "value": "GTM <span>strategy</span>", "label": "A plan your team can actually execute" },
     { "value": "<span>Established</span> biz", "label": "For companies with traction, ready for more" }
